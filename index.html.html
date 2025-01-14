@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سایت با بک‌گراند و گالری</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('1337579.jpg'); /* عکس پس‌زمینه */
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 100%;
+            color: white;
+            background: rgba(0, 0, 0, 0.5); /* شفافیت برای خوانایی بهتر */
+        }
+        .content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            padding: 20px;
+            width: 90%;
+            max-width: 1200px;
+        }
+        .gallery img, .gallery video {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        /* تنظیم اندازه ویدئوها */
+        .gallery video {
+            width: 100%;
+            height: 300px; /* سایز ارتفاع ویدئو */
+            object-fit: cover; /* برای تناسب ویدئو با اندازه جدید */
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <!-- عکس پس‌زمینه -->
+    <div class="background-image"></div>
+
+    <!-- محتوای اصلی -->
+    <div class="content">
+        <h1>کی به کی تاریکی</h1>
+            <h3>تولدت مبارک</h3>
+
+        <!-- گالری تصاویر -->
+        <div class="gallery">
+            <img src="IMG_20230724_174814.jpg" alt="تصویر 1">
+            <img src="IMG_20230724_174823.jpg" alt="تصویر 2">
+            <img src="IMG_20231218_142326.jpg" alt="تصویر 3">
+            <img src="IMG_20240107_205254.jpg" alt="تصویر 4">
+            <img src="IMG_20240523_161023.jpg" alt="تصویر 5">
+            <img src="IMG_20240523_182025.jpg" alt="تصویر 6">
+            <img src="IMG_20240523_182045.jpg" alt="تصویر 7">
+            <img src="IMG_20240601_191121.jpg" alt="تصویر 8">
+            <img src="IMG_20240602_200420.jpg" alt="تصویر 9">
+            <img src="IMG_20240607_145249.jpg" alt="تصویر 10">
+            <img src="IMG_20241101_154127.jpg" alt="تصویر 11">
+            <img src="IMG_20241027_184151.jpg" alt="تصویر 12">
+            <!-- ویدئوها -->
+            <video controls>
+                <source src="Rec 0007.mp4" type="video/mp4">
+                مرورگر شما از ویدئو پشتیبانی نمی‌کند.
+            </video>
+            <video controls>
+                <source src="Rec 0008.mp4" type="video/mp4">
+                مرورگر شما از ویدئو پشتیبانی نمی‌کند.
+            </video>
+        </div>
+    </div>
+</body>
+</html>
